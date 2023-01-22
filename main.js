@@ -14,8 +14,8 @@ const natalia = {
 
 //Objeto literal
 function Student(name, age, cursosAprobados){
-    this.name = "natalia";
-    this.age = 20;
+    this.name = name;
+    this.age = age;
     this.cursosAprobados = cursosAprobados;
     //Creando métodos:
     //this.aprobarCurso = function(nuevoCurso){
@@ -36,3 +36,35 @@ const juanita = new Student(
     ["Curso de introducción a los Videojuegos",
     "Curso de Creación de personajes"]
     )
+
+// Prototipos con la sintaxis de clases
+class Student2 {
+    constructor(name, age, cursosAprobados = []){
+        this.name = name;
+        this.age = age;
+        this.cursosAprobados = cursosAprobados;
+    }
+    aprobarCurso(nuevoCurso) {
+        this.cursosAprobados.push(nuevoCursito);
+    }
+}
+
+//const miguelito = new Student2(
+//    "miguel",
+//    28,
+//    [
+//        "Curso de analisis de negocios",
+//        "Curso de fundamentos de POO"
+//    ]
+//)
+
+// Creando un objeto mandando un objeto literal
+const miguelito = new Student2({
+    name: "Miguel",
+    age: 28,
+    cursosAprobados: 
+    [
+        "Curso de analisis de negocios",
+        "Curso de fundamentos de POO"
+    ]
+})
